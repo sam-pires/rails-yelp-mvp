@@ -3,5 +3,12 @@
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.phone_number %></p>
 
+<h3>Reviews</h3>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+  <li><%= review.content %> - <%= review.rating %>/5</li>
+  <% end %>
+</ul>
+
 
 <%= link_to 'Back to restaurants', restaurants_path %>
